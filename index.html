@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Spacecolour by JohnReeves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Spacecolour</h1>
+      <h2 class="project-tagline">Colour your solar system with Material Design.</h2>
+      <a href="https://github.com/JohnReeves/SpaceColour" class="btn">View on GitHub</a>
+      <a href="https://github.com/JohnReeves/SpaceColour/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/JohnReeves/SpaceColour/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="space-worksheet-15" class="anchor" href="#space-worksheet-15" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Space Worksheet 1.5</h1>
+
+<p><img src="http://imgur.com/fEOkc2K.png" alt="alt text" title="space example"></p>
+
+<p>You need to find the JSFiddle link for the solar system that you made last week - if for whatever reason you can't or you have lost it I have made you a <a href="http://jsfiddle.net/Y662q/">starting jsfiddle</a> - you will need to fork it before you start!</p>
+
+<h2>
+<a id="task-1---hex-colours" class="anchor" href="#task-1---hex-colours" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Task 1 - Hex Colours</h2>
+
+<p>There are many ways to represent colours with computers - we've been telling our svg shapes to be "red" or "yellow" or "green" - this isn't great if you want a specific colour green!</p>
+
+<h3>
+<a id="option-a---rgb-values" class="anchor" href="#option-a---rgb-values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Option A - rgb values</h3>
+
+<p>Microsoft Word likes to use this - if you ever try to change the colour to a custom colour you get a colour wheel:
+<img src="http://www.codeproject.com/KB/miscctrl/XColorSpectrumCtrl/XColorSpectrumCtrl4.png" alt="alt text" title="microsoft word colour picker"></p>
+
+<p>This gets you three values (Red, Green, Blue) - 0 means you've got none of that colour, 255 means a lot of that colour. So:</p>
+
+<ul>
+<li>red would be 255,0,0</li>
+<li>green would be 0,255,0</li>
+<li>purple would be 153,51,204</li>
+</ul>
+
+<h3>
+<a id="option-b---hex-values" class="anchor" href="#option-b---hex-values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Option B - Hex Values</h3>
+
+<p><em>this is what most people use now</em></p>
+
+<p>Basically a more efficient way of representing a rgb value - Instead of going from 0 to 255, you go from 00 to FF</p>
+
+<ul>
+<li>red would be #FF0000</li>
+<li>green is #00FF00</li>
+<li>purple would be #9933CC</li>
+</ul>
+
+<p>Try making each of your planets a more accurate colour in your solar system. There are some links at the bottom of the page to get some hex color codes quickly!</p>
+
+<h2>
+<a id="task-2---gradients" class="anchor" href="#task-2---gradients" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Task 2 - Gradients</h2>
+
+<h3>
+<a id="linear-gradients" class="anchor" href="#linear-gradients" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Linear gradients</h3>
+
+<p><img src="http://imgur.com/bcMc4tX.png" alt="alt text" title="linear gradient"></p>
+
+<div class="highlight highlight-text-xml"><pre>  &lt;<span class="pl-ent">linearGradient</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>grad1<span class="pl-pds">"</span></span> <span class="pl-e">x1</span>=<span class="pl-s"><span class="pl-pds">"</span>0%<span class="pl-pds">"</span></span> <span class="pl-e">y1</span>=<span class="pl-s"><span class="pl-pds">"</span>0%<span class="pl-pds">"</span></span> <span class="pl-e">x2</span>=<span class="pl-s"><span class="pl-pds">"</span>100%<span class="pl-pds">"</span></span> <span class="pl-e">y2</span>=<span class="pl-s"><span class="pl-pds">"</span>0%<span class="pl-pds">"</span></span>&gt;
+      &lt;<span class="pl-ent">stop</span> <span class="pl-e">offset</span>=<span class="pl-s"><span class="pl-pds">"</span>0%<span class="pl-pds">"</span></span> <span class="pl-e">stop-color</span>=<span class="pl-s"><span class="pl-pds">"</span>#1AD6FD<span class="pl-pds">"</span></span>/&gt;
+      &lt;<span class="pl-ent">stop</span> <span class="pl-e">offset</span>=<span class="pl-s"><span class="pl-pds">"</span>100%<span class="pl-pds">"</span></span> <span class="pl-e">stop-color</span>=<span class="pl-s"><span class="pl-pds">"</span>#1D62F0<span class="pl-pds">"</span></span> /&gt;
+  &lt;/<span class="pl-ent">linearGradient</span>&gt;
+
+  &lt;<span class="pl-ent">circle</span> <span class="pl-e">cx</span>=<span class="pl-s"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">cy</span>=<span class="pl-s"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">r</span>=<span class="pl-s"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">fill</span>=<span class="pl-s"><span class="pl-pds">"</span>url(#grad1)<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<ul>
+<li>id = the name of the gradient - needed to give to the circle's fill attribute</li>
+<li>x1 &amp; x2 = start and stop x values = these go from 0 to 100 to make our gradient</li>
+<li>y1 &amp; y2 = start and stop y values = these stay constant for our example</li>
+<li>stop offset
+
+<ul>
+<li>offest = how far down the gradient you want the colour</li>
+<li>stop-color = hex code for the stop point</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="radial-gradients" class="anchor" href="#radial-gradients" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Radial Gradients</h3>
+
+<p><img src="http://imgur.com/D0j6wqk.png" alt="alt text" title="radial gradient"></p>
+
+<div class="highlight highlight-text-xml"><pre>  &lt;<span class="pl-ent">radialGradient</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>grad2<span class="pl-pds">"</span></span> <span class="pl-e">cx</span>=<span class="pl-s"><span class="pl-pds">"</span>50%<span class="pl-pds">"</span></span> <span class="pl-e">cy</span>=<span class="pl-s"><span class="pl-pds">"</span>50%<span class="pl-pds">"</span></span> <span class="pl-e">r</span>=<span class="pl-s"><span class="pl-pds">"</span>50%<span class="pl-pds">"</span></span> <span class="pl-e">fx</span>=<span class="pl-s"><span class="pl-pds">"</span>50%<span class="pl-pds">"</span></span> <span class="pl-e">fy</span>=<span class="pl-s"><span class="pl-pds">"</span>50%<span class="pl-pds">"</span></span>&gt;
+      &lt;<span class="pl-ent">stop</span> <span class="pl-e">offset</span>=<span class="pl-s"><span class="pl-pds">"</span>0%<span class="pl-pds">"</span></span> <span class="pl-e">stop-color</span>=<span class="pl-s"><span class="pl-pds">"</span>#ffcc00<span class="pl-pds">"</span></span> /&gt;
+      &lt;<span class="pl-ent">stop</span> <span class="pl-e">offset</span>=<span class="pl-s"><span class="pl-pds">"</span>100%<span class="pl-pds">"</span></span> <span class="pl-e">stop-color</span>=<span class="pl-s"><span class="pl-pds">"</span>#cc0000<span class="pl-pds">"</span></span> /&gt;
+  &lt;/<span class="pl-ent">radialGradient</span>&gt;
+
+  &lt;<span class="pl-ent">circle</span> <span class="pl-e">cx</span>=<span class="pl-s"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">cy</span>=<span class="pl-s"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">r</span>=<span class="pl-s"><span class="pl-pds">"</span>100<span class="pl-pds">"</span></span> <span class="pl-e">fill</span>=<span class="pl-s"><span class="pl-pds">"</span>url(#grad2)<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<ul>
+<li>id = used to connect with the shapes you want that colour</li>
+<li>cx &amp; cy = represent the center coordinates for the outer circle</li>
+<li>r = how far the gradient should go out from the center</li>
+<li>fx &amp; fy = denote the coordinates for the inner circle</li>
+</ul>
+
+<p>In your solar system - make Earth use a horizontal linear gradient from green to blue. If you get time make your sun become a radial gradient.</p>
+
+<h2>
+<a id="useful-colour-links" class="anchor" href="#useful-colour-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Useful Colour Links</h2>
+
+<ol>
+<li><a href="http://www.colorhexa.com">http://www.colorhexa.com</a></li>
+<li><a href="http://ios7colors.com/">http://ios7colors.com/</a></li>
+<li><a href="http://developer.android.com/design/style/color.html">http://developer.android.com/design/style/color.html</a></li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JohnReeves/SpaceColour">Spacecolour</a> is maintained by <a href="https://github.com/JohnReeves">JohnReeves</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
